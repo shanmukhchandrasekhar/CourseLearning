@@ -456,11 +456,9 @@
 
 })(jQuery);
 
-  // Function to open modal with video
+
   function openFullscreenModal(videoUrl) {
-	// Set video URL to iframe source
 	document.getElementById('videoFrame').src = videoUrl;
-	// Show the modal
 	var fullscreenModal = new bootstrap.Modal(document.getElementById('fullscreenModal'), {
 	  backdrop: 'static',
 	  keyboard: false
@@ -468,7 +466,42 @@
 	fullscreenModal.show();
   }
  
-   document.getElementById('openFullscreenModal').addEventListener('click', function() {
-	console.log("message!!!!!!!!!!!!")
-	openFullscreenModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1');
+  var myModal = document.getElementById('myModal');
+  myModal.addEventListener('hidden.bs.modal', function (event) {
+	var iframe = myModal.querySelector('iframe');
+	iframe.src = iframe.src;
   });
+  
+
+function loadYouTubeVideo(videoUrl) {
+	var youtubeVideoPlaceholder = document.getElementById('youtubeVideoYoutubeModal');
+	if (youtubeVideoPlaceholder.innerHTML.trim() === '') {
+		youtubeVideoPlaceholder.innerHTML = `
+			<iframe class="embed-responsive-item modal-video"
+				src="${videoUrl}"></iframe>
+		`;
+	}
+}
+
+
+function loadPdfViewer(pdfUrl) {
+	var pdfViewerPlaceholder = document.getElementById('pdfViewerPdfModal');
+	if (pdfViewerPlaceholder.innerHTML.trim() === '') {
+		pdfViewerPlaceholder.innerHTML = `
+			<embed id="pdfViewerEmbed" src="${pdfUrl}" type="application/pdf" class="embed-responsive-item modal-pdf">
+		`;
+	}
+}
+
+function resetPdfViewer() {
+	var pdfViewerEmbed = document.getElementById('pdfViewerEmbed');
+	if (pdfViewerEmbed) {
+		pdfViewerEmbed.parentNode.removeChild(pdfViewerEmbed);
+	}
+}
+
+function startAssessment(chapter) {
+	// Here, you would have your logic to load the assessment for the given chapter
+	// For example, show a modal with questions for the chapter
+	alert('Starting assessment for ' + chapter);
+}
