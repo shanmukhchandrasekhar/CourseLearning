@@ -500,23 +500,6 @@ function loadYouTubeVideo(videoUrl, youtubeModalId) {
 }
 
 
-
-// function loadPdfViewer(pdfUrl, pdfId) {
-// 	var pdfViewerPlaceholder = document.getElementById(pdfId);
-// 	if (pdfViewerPlaceholder.innerHTML.trim() === '') {
-// 		pdfViewerPlaceholder.innerHTML = `
-// 			<embed id="pdfViewerEmbed" src="${pdfUrl}" type="application/pdf" class="embed-responsive-item modal-pdf">
-// 		`;
-// 	}
-// }
-
-// function resetPdfViewer() {
-// 	var pdfViewerEmbed = document.getElementById('pdfViewerEmbed');
-// 	if (pdfViewerEmbed) {
-// 		pdfViewerEmbed.parentNode.removeChild(pdfViewerEmbed);
-// 	}
-// }
-
 let modalCounter = 1;
 
 function loadPdfViewer(pdfUrl, modalId) {

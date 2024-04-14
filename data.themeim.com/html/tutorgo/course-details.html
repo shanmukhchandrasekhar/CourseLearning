@@ -230,7 +230,7 @@
                                  aria-labelledby="curriculum-tab">
                                  <div style="margin-bottom:40px">
                                     <div class="progress" style="height:15px">
-                                       <div class="progress-bar bg-success" role="progressbar" style="width:50%"
+                                       <div class="progress-bar bg-success progressCustom" role="progressbar" style="width:50%"
                                           aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
                                     </div>
                                  </div>
@@ -358,8 +358,71 @@
                                                    </div>
                                                    <div class="course__curriculum-meta">
                                                       <button type="button" class="btn btn-outline-primary btn-sm"
-                                                         onclick="startAssessment('Chapter 01')">Start
+                                                         id="button1T" 
+                                                         data-bs-toggle="modal" data-bs-target="#myModal11">Start
                                                          Assessment</button>
+                                                   </div>
+                                                   <div class="modal" id="myModal11">
+                                                      <div class="modal-dialog modal-fullscreen">
+                                                         <div class="modal-content">
+                                                            <div class="modal-header custom-header-modal">
+                                                               <h4 class="modal-title text-success bg-muted">Assessment
+                                                                  01
+                                                                  - Introduction to Foundry
+                                                               </h4><!--<button type="button" class="btn-close"
+                                                                  data-bs-dismiss="modal"></button> -->
+                                                            </div>
+
+                                                            <div class="modal-body">
+                                                               <div
+                                                                  class="alert alert-warning alert-dismissible mt-5 mx-4"
+                                                                  role="alert">
+                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" fill="currentColor"
+                                                                     class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+                                                                     viewBox="0 0 16 16" role="img"
+                                                                     aria-label="Warning:">
+                                                                     <path
+                                                                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                                  </svg>Please do not close this window. If so you may
+                                                                  need to re take the exam.<button type="button"
+                                                                     class="btn-close" data-bs-dismiss="alert"
+                                                                     aria-label="Close"></button>
+                                                               </div>
+
+                                                               <div class="ModalBodyPlaceholder">
+
+                                                                  <div class="Quizcontainer">
+
+                                                                     <div id="quiz1"></div>
+                                                                     <div id="result1" class="quizResult"></div>
+                                                                     <div class="quiz-Align-btn">
+                                                                        <button id="submit1"
+                                                                           class="QuizButton">Next</button>
+                                                                     </div>
+                                                                     <div class="quiz-Align-bottom-btn">
+                                                                        <button id="retry1"
+                                                                           class="QuizButton Quizhide">Retry</button>
+                                                                        <button id="showAnswer1"
+                                                                           class="QuizButton Quizhide">Show
+                                                                           Answer</button>
+                                                                     </div>
+                                                                  </div>
+
+                                                               </div>
+
+                                                            </div>
+                                                            <div class="modal-footer custom-header-modal">
+                                                               <!-- <button type="button" class="btn btn-info"
+                                                               id="ModalLaunchBtn">Launch
+                                                                  Exam</button> -->
+
+                                                               <button type="button" class="btn btn-danger"
+                                                                  data-bs-dismiss="modal">Close</button>
+                                                            </div>
+
+                                                         </div>
+                                                      </div>
                                                    </div>
                                                 </div>
                                              </div>
@@ -489,7 +552,81 @@
                                                       <h3><span>Assessment:</span>Types of Casting
                                                          processes</h3>
                                                    </div>
-                                                   <div class="course__curriculum-meta"></div>
+
+                                                   <div class="course__curriculum-meta">
+                                                      <button type="button" id="button2T"
+                                                         class="btn btn-outline-primary btn-sm"
+                                                         onclick="loadYouTubeVideo('Chapter 02')" data-bs-toggle="modal"
+                                                         data-bs-target="#myModal12">Start
+                                                         Assessment</button>
+                                                   </div>
+
+                                                   <div class="modal" id="myModal12">
+                                                      <div class="modal-dialog modal-fullscreen">
+                                                         <div class="modal-content">
+                                                            <div class="modal-header custom-header-modal">
+                                                               <h4 class="modal-title text-success bg-muted">Assessment
+                                                                  02
+                                                                  - Types of Casting processes
+                                                               </h4><!--<button type="button" class="btn-close"
+                                                                  data-bs-dismiss="modal"></button> -->
+                                                            </div>
+
+
+                                                            <div class="modal-body">
+                                                               <div
+                                                                  class="alert alert-warning alert-dismissible mt-5 mx-4"
+                                                                  role="alert">
+                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" fill="currentColor"
+                                                                     class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+                                                                     viewBox="0 0 16 16" role="img"
+                                                                     aria-label="Warning:">
+                                                                     <path
+                                                                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                                  </svg>Please do not refresh the page . If
+                                                                  so you may
+                                                                  need to re take the exam.<button type="button"
+                                                                     class="btn-close" data-bs-dismiss="alert"
+                                                                     aria-label="Close"></button>
+                                                               </div>
+
+                                                               <div class="ModalBodyPlaceholder">
+                                                                  <div class="Quizcontainer">
+
+                                                                     <div id="quiz2"></div>
+                                                                     <div id="result2" class="quizResult"></div>
+                                                                     <div class="quiz-Align-btn">
+                                                                        <button id="submit2"
+                                                                           class="QuizButton">Next</button>
+                                                                     </div>
+                                                                     <div class="quiz-Align-bottom-btn">
+                                                                        <button id="retry2"
+                                                                           class="QuizButton Quizhide">Retry</button>
+                                                                        <button id="showAnswer2"
+                                                                           class="QuizButton Quizhide">Show
+                                                                           Answer</button>
+                                                                     </div>
+
+
+
+                                                                  </div>
+                                                               </div>
+
+                                                            </div>
+                                                            <div class="modal-footer custom-header-modal">
+                                                               <!-- <button type="button" class="btn btn-info"
+                                                               id="ModalLaunchBtn">Launch
+                                                                  Exam</button> -->
+
+                                                               <button type="button" class="btn btn-danger"
+                                                                  data-bs-dismiss="modal">Close</button>
+                                                            </div>
+
+                                                         </div>
+                                                      </div>
+                                                   </div>
+
                                                 </div>
                                              </div>
                                           </div>
@@ -613,19 +750,91 @@
                                                       </svg>
                                                       <h3><span>Assessment:</span>Molding Defects</h3>
                                                    </div>
-                                                   <div class="course__curriculum-meta"></div>
+                                                   <div class="course__curriculum-meta">
+                                                      <button type="button" id="button3T"
+                                                         class="btn btn-outline-primary btn-sm"
+                                                         onclick="loadYouTubeVideo('Chapter 03')" data-bs-toggle="modal"
+                                                         data-bs-target="#myModal13">Start
+                                                         Assessment</button>
+                                                   </div>
+                                                   <div class="modal" id="myModal13">
+                                                      <div class="modal-dialog modal-fullscreen">
+                                                         <div class="modal-content">
+                                                            <div class="modal-header custom-header-modal">
+                                                               <h4 class="modal-title text-success bg-muted">Assessment
+                                                                  03
+                                                                  - Molding Defects
+                                                               </h4><!--<button type="button" class="btn-close"
+                                                                  data-bs-dismiss="modal"></button> -->
+                                                            </div>
+
+
+                                                            <div class="modal-body">
+                                                               <div
+                                                                  class="alert alert-warning alert-dismissible mt-5 mx-4"
+                                                                  role="alert">
+                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" fill="currentColor"
+                                                                     class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+                                                                     viewBox="0 0 16 16" role="img"
+                                                                     aria-label="Warning:">
+                                                                     <path
+                                                                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                                  </svg>Please do not refresh the page . If
+                                                                  so you may
+                                                                  need to re take the exam.<button type="button"
+                                                                     class="btn-close" data-bs-dismiss="alert"
+                                                                     aria-label="Close"></button>
+                                                               </div>
+
+                                                               <div class="ModalBodyPlaceholder">
+                                                                  <div class="Quizcontainer">
+
+
+                                                                     <div id="quiz3"></div>
+                                                                     <div id="result3" class="quizResult"></div>
+                                                                     <div class="quiz-Align-btn">
+                                                                        <button id="submit3"
+                                                                           class="QuizButton">Next</button>
+                                                                     </div>
+                                                                     <div class="quiz-Align-bottom-btn">
+                                                                        <button id="retry3"
+                                                                           class="QuizButton Quizhide">Retry</button>
+                                                                        <button id="showAnswer3"
+                                                                           class="QuizButton Quizhide">Show
+                                                                           Answer</button>
+                                                                     </div>
+
+
+
+                                                                  </div>
+                                                               </div>
+
+                                                            </div>
+                                                            <div class="modal-footer custom-header-modal">
+                                                               <!-- <button type="button" class="btn btn-info"
+                                                               id="ModalLaunchBtn">Launch
+                                                                  Exam</button> -->
+
+                                                               <button type="button" class="btn btn-danger"
+                                                                  data-bs-dismiss="modal">Close</button>
+                                                            </div>
+
+                                                         </div>
+                                                      </div>
+                                                   </div>
                                                 </div>
                                              </div>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="container mt-5 d-flex justify-content-between">
+                                 <div class="d-none" id="courseCompletionDoc">
                                     <div>
                                        <h3>Congratulations on completing the course!</h3>
                                        <p>Course Completion Certificate</p>
                                     </div><button class="btn btn-success btn-sm rounded-3" style="height:40px"><a
-                                          href="path_to_certificate.pdf"
+                                          href="./assets/docs/courseCertificate.pdf"
                                           download="course_completion_certificate.pdf">Download
                                           Certificate</a></button>
                                  </div>
@@ -633,9 +842,7 @@
                               <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
                                  <div class="course__review">
                                     <h3>Reviews</h3>
-                                    <p>Gosh william I'm telling crikey burke I don't want no agro A bit of
-                                       how's your father bugger all mate off his nut that, what a plonker
-                                       cuppa owt to do</p>
+                                    <p>Discover What Others Are Saying: Our Customer Reviews Speak Volumes!</p>
                                     <div class="course__review-rating mb-50">
                                        <div class="row g-0">
                                           <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
@@ -727,12 +934,14 @@
                                        <ul>
                                           <li>
                                              <div class="course__comment-box">
-                                                <div class="course__comment-thumb float-start"><img
-                                                      src="assets/img/testimonial/avata-lg-2.png" alt=""></div>
+                                                <div class="course__comment-thumb float-start">
+                                                   <img
+                                                      src="assets/img/testimonial/avata-lg-2.png" alt="">
+                                                   </div> 
                                                 <div class="course__comment-content">
                                                    <div class="course__comment-wrapper ml-70 fix">
                                                       <div class="course__comment-info float-start">
-                                                         <h4>Murthyt</h4><span>July 14, 2022</span>
+                                                         <h4>Murthy</h4><span>March 14, 2024</span>
                                                       </div>
                                                       <div class="course__comment-rating float-start float-sm-end">
                                                          <ul>
@@ -750,23 +959,22 @@
                                                       </div>
                                                    </div>
                                                    <div class="course__comment-text ml-70">
-                                                      <p>So I said lurgy dropped a clanger Jeffrey
-                                                         bugger cuppa gosh David blatant have it,
-                                                         standard A bit of how's your father my lady
-                                                         absolutely.</p>
+                                                      <p>This course exceeded my expectations! The detailed explanations and interactive quizzes made learning engaging and effective. Highly recommended for anyone looking to master the fundamentals.</p>
                                                    </div>
                                                 </div>
                                              </div>
                                           </li>
                                           <li>
                                              <div class="course__comment-box">
-                                                <div class="course__comment-thumb float-start"><img
-                                                      src="assets/img/testimonial/avata-lg-4.png" alt=""></div>
+                                                <div class="course__comment-thumb float-start">
+                                                   <img
+                                                      src="assets/img/testimonial/avata-lg-4.png" alt="">
+                                                   </div>
                                                 <div class="course__comment-content">
                                                    <div class="course__comment-wrapper ml-70 fix">
                                                       <div class="course__comment-info float-start">
-                                                         <h4>Samrat Islam Tushar</h4><span>July 17,
-                                                            2022</span>
+                                                         <h4>Sairam</h4><span>March 17,
+                                                            2024</span>
                                                       </div>
                                                       <div class="course__comment-rating float-start float-sm-end">
                                                          <ul>
@@ -785,8 +993,7 @@
                                                       </div>
                                                    </div>
                                                    <div class="course__comment-text ml-70">
-                                                      <p>David blatant have it, standard A bit of
-                                                         how's your father my lady absolutely.</p>
+                                                      <p>I was skeptical at first, but this course blew me away! The instructors are experts in their field, and the hands-on projects really solidified my understanding. Can't wait to explore more advanced courses from this platform.</p>
                                                    </div>
                                                 </div>
                                              </div>
@@ -852,9 +1059,9 @@
                                        <div class="row align-items-center">
                                           <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-6">
                                              <div class="course__member-thumb d-flex align-items-center">
-                                                <img src="assets/img/testimonial/avata-lg-4.png" alt="">
+                                                <!-- <img src="assets/img/testimonial/avata-lg-4.png" alt=""> -->
                                                 <div class="course__member-name ml-20">
-                                                   <h5>Samrat Islam Tushar</h5><span>Engineer</span>
+                                                   <h5>Murthy</h5><span>Instructor</span>
                                                 </div>
                                              </div>
                                           </div>
@@ -879,9 +1086,36 @@
                                        <div class="row align-items-center">
                                           <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-6">
                                              <div class="course__member-thumb d-flex align-items-center">
-                                                <img src="assets/img/testimonial/avata-lg-2.png" alt="">
+                                                <!-- <img src="assets/img/testimonial/avata-lg-2.png" alt=""> -->
                                                 <div class="course__member-name ml-20">
-                                                   <h5>Lauren Stamps</h5><span>Teacher</span>
+                                                   <h5>Krishna</h5><span>Engineer</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
+                                             <div class="course__member-info pl-45">
+                                                <h5>06</h5><span>Courses</span>
+                                             </div>
+                                          </div>
+                                          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
+                                             <div class="course__member-info pl-70">
+                                                <h5>05</h5><span>Reviw</span>
+                                             </div>
+                                          </div>
+                                          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
+                                             <div class="course__member-info pl-85">
+                                                <h5>3.5</h5><span>Rating</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="course__member-item">
+                                       <div class="row align-items-center">
+                                          <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-6">
+                                             <div class="course__member-thumb d-flex align-items-center">
+                                                <!-- <img src="assets/img/testimonial/avata-lg-2.png" alt=""> -->
+                                                <div class="course__member-name ml-20">
+                                                   <h5>Sairam</h5><span>Teacher</span>
                                                 </div>
                                              </div>
                                           </div>
@@ -906,9 +1140,9 @@
                                        <div class="row align-items-center">
                                           <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-6">
                                              <div class="course__member-thumb d-flex align-items-center">
-                                                <img src="assets/img/testimonial/avata-lg-3.png" alt="">
+                                                <!-- <img src="assets/img/testimonial/avata-lg-3.png" alt=""> -->
                                                 <div class="course__member-name ml-20">
-                                                   <h5>Jonquil Von</h5><span>Associate</span>
+                                                   <h5>Isha</h5><span>Associate</span>
                                                 </div>
                                              </div>
                                           </div>
@@ -1116,6 +1350,9 @@
    <script src="assets/js/countdown.js"></script>
    <script src="assets/js/main.js"></script>
    <script src="assets/js/headerAndFooter.js"></script>
+   <script src="assets/js/cQuiz1.js"></script>
+   <script src="assets/js/cQuiz2.js"></script>
+   <script src="assets/js/cQuiz3.js"></script>
 
    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
