@@ -466,42 +466,83 @@
 	fullscreenModal.show();
   }
  
-  var myModal = document.getElementById('myModal');
+  var myModal = document.getElementById('myModal3');
   myModal.addEventListener('hidden.bs.modal', function (event) {
 	var iframe = myModal.querySelector('iframe');
 	iframe.src = iframe.src;
   });
+
+  var myModal1 = document.getElementById('myModal1');
+  myModal1.addEventListener('hidden.bs.modal', function (event) {
+	var iframe = myModal1.querySelector('iframe');
+	iframe.src = iframe.src;
+  });
+
+  var myModal2 = document.getElementById('myModal2');
+  myModal2.addEventListener('hidden.bs.modal', function (event) {
+	var iframe = myModal2.querySelector('iframe');
+	iframe.src = iframe.src;
+  });
+
+ 
   
 
-function loadYouTubeVideo(videoUrl) {
-	var youtubeVideoPlaceholder = document.getElementById('youtubeVideoYoutubeModal');
+function loadYouTubeVideo(videoUrl, youtubeModalId) {
+	var youtubeVideoPlaceholder = document.getElementById(youtubeModalId);
 	if (youtubeVideoPlaceholder.innerHTML.trim() === '') {
 		youtubeVideoPlaceholder.innerHTML = `
 			<iframe class="embed-responsive-item modal-video"
 				src="${videoUrl}"></iframe>
+
+				
 		`;
 	}
 }
 
 
-function loadPdfViewer(pdfUrl) {
-	var pdfViewerPlaceholder = document.getElementById('pdfViewerPdfModal');
-	if (pdfViewerPlaceholder.innerHTML.trim() === '') {
-		pdfViewerPlaceholder.innerHTML = `
-			<embed id="pdfViewerEmbed" src="${pdfUrl}" type="application/pdf" class="embed-responsive-item modal-pdf">
-		`;
-	}
+
+// function loadPdfViewer(pdfUrl, pdfId) {
+// 	var pdfViewerPlaceholder = document.getElementById(pdfId);
+// 	if (pdfViewerPlaceholder.innerHTML.trim() === '') {
+// 		pdfViewerPlaceholder.innerHTML = `
+// 			<embed id="pdfViewerEmbed" src="${pdfUrl}" type="application/pdf" class="embed-responsive-item modal-pdf">
+// 		`;
+// 	}
+// }
+
+// function resetPdfViewer() {
+// 	var pdfViewerEmbed = document.getElementById('pdfViewerEmbed');
+// 	if (pdfViewerEmbed) {
+// 		pdfViewerEmbed.parentNode.removeChild(pdfViewerEmbed);
+// 	}
+// }
+
+let modalCounter = 1;
+
+function loadPdfViewer(pdfUrl, modalId) {
+    let pdfViewerPlaceholder = document.getElementById(modalId + '-pdfViewer');
+    
+    if (pdfViewerPlaceholder.innerHTML.trim() === '') {
+        let embedId = `pdfViewerEmbed${modalCounter}`;
+        pdfViewerPlaceholder.innerHTML = `
+            <embed id="${embedId}" src="${pdfUrl}" type="application/pdf" class="embed-responsive-item modal-pdf">
+        `;
+        modalCounter++;
+    }
 }
 
-function resetPdfViewer() {
-	var pdfViewerEmbed = document.getElementById('pdfViewerEmbed');
-	if (pdfViewerEmbed) {
-		pdfViewerEmbed.parentNode.removeChild(pdfViewerEmbed);
-	}
+function resetPdfViewer(modalId) {
+    let pdfViewerEmbed = document.getElementById(modalId + '-pdfViewer');
+    if (pdfViewerEmbed) {
+        pdfViewerEmbed.innerHTML = '';
+    }
 }
+
 
 function startAssessment(chapter) {
 	// Here, you would have your logic to load the assessment for the given chapter
 	// For example, show a modal with questions for the chapter
 	alert('Starting assessment for ' + chapter);
 }
+
+
