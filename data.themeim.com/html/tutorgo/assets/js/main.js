@@ -4,6 +4,7 @@
 
 ****************************************************/
 
+
 (function ($) {
 	"use strict";
 
@@ -471,6 +472,7 @@
 	var iframe = myModal.querySelector('iframe');
 	iframe.src = iframe.src;
   });
+  
   
 
 function loadYouTubeVideo(videoUrl) {

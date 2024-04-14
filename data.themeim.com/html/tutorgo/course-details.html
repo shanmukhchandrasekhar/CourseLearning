@@ -291,12 +291,13 @@
                                  aria-labelledby="curriculum-tab">
                                  <div style="margin-bottom:40px">
                                     <div class="progress" style="height:15px">
-                                       <div class="progress-bar bg-success" role="progressbar" style="width:50%"
+                                       <div class="progress-bar bg-success progressCustom" role="progressbar" style="width:50%"
                                           aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
                                     </div>
                                  </div>
                                  <div class="course__curriculum">
-                                    <div class="accordion" id="course__accordion">
+
+                                    <div class="accordion" id="course__accordion-1">
                                        <div class="accordion-item mb-50">
                                           <h2 class="accordion-header" id="week-01"><button class="accordion-button"
                                                 type="button" data-bs-toggle="collapse"
@@ -304,7 +305,7 @@
                                                 aria-controls="week-01-content">Chapter 01: Introduction
                                                 to Foundry</button></h2>
                                           <div id="week-01-content" class="accordion-collapse collapse show"
-                                             aria-labelledby="week-01" data-bs-parent="#course__accordion">
+                                             aria-labelledby="week-01" data-bs-parent="#course__accordion-1">
                                              <div class="accordion-body">
                                                 <div
                                                    class="course__curriculum-content d-sm-flex justify-content-between align-items-center">
@@ -419,8 +420,72 @@
                                                    </div>
                                                    <div class="course__curriculum-meta">
                                                       <button type="button" class="btn btn-outline-primary btn-sm"
-                                                         onclick="startAssessment('Chapter 01')">Start
-                                                         Assessment</button>
+                                                         id="button1T" onclick="loadYouTubeVideo('Chapter 01')"
+                                                         data-bs-toggle="modal" data-bs-target="#myModal1">Start
+                                                         Assessment.</button>
+                                                   </div>
+
+                                                   <div class="modal" id="myModal1">
+                                                      <div class="modal-dialog modal-fullscreen">
+                                                         <div class="modal-content">
+                                                            <div class="modal-header custom-header-modal">
+                                                               <h4 class="modal-title text-success bg-muted">Assessment
+                                                                  01
+                                                                  - Introduction to Foundry
+                                                               </h4><!--<button type="button" class="btn-close"
+                                                                  data-bs-dismiss="modal"></button> -->
+                                                            </div>
+
+                                                            <div class="modal-body">
+                                                               <div
+                                                                  class="alert alert-warning alert-dismissible mt-5 mx-4"
+                                                                  role="alert">
+                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" fill="currentColor"
+                                                                     class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+                                                                     viewBox="0 0 16 16" role="img"
+                                                                     aria-label="Warning:">
+                                                                     <path
+                                                                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                                  </svg>Please do not close this window. If so you may
+                                                                  need to re take the exam.<button type="button"
+                                                                     class="btn-close" data-bs-dismiss="alert"
+                                                                     aria-label="Close"></button>
+                                                               </div>
+
+                                                               <div class="ModalBodyPlaceholder">
+
+                                                                  <div class="Quizcontainer">
+
+                                                                     <div id="quiz1"></div>
+                                                                     <div id="result1" class="quizResult"></div>
+                                                                     <div class="quiz-Align-btn">
+                                                                        <button id="submit1"
+                                                                           class="QuizButton">Next</button>
+                                                                     </div>
+                                                                     <div class="quiz-Align-bottom-btn">
+                                                                        <button id="retry1"
+                                                                           class="QuizButton Quizhide">Retry</button>
+                                                                        <button id="showAnswer1"
+                                                                           class="QuizButton Quizhide">Show
+                                                                           Answer</button>
+                                                                     </div>
+                                                                  </div>
+
+                                                               </div>
+
+                                                            </div>
+                                                            <div class="modal-footer custom-header-modal">
+                                                               <!-- <button type="button" class="btn btn-info"
+                                                               id="ModalLaunchBtn">Launch
+                                                                  Exam</button> -->
+
+                                                               <button type="button" class="btn btn-danger"
+                                                                  data-bs-dismiss="modal">Close</button>
+                                                            </div>
+
+                                                         </div>
+                                                      </div>
                                                    </div>
                                                 </div>
                                              </div>
@@ -456,7 +521,7 @@
                                                          class="btn btn-outline-primary btn-sm"
                                                          onclick='loadPdfViewer("assets/docs/Types of Casting Processes.pdf")'
                                                          data-bs-toggle="modal" data-bs-target="#coursePdfModal">View
-                                                         Material</button>
+                                                         Material...</button>
                                                       <div class="modal" id="coursePdfModal">
                                                          <div class="modal-dialog modal-fullscreen">
                                                             <div class="modal-content">
@@ -550,13 +615,87 @@
                                                       <h3><span>Assessment:</span>Types of Casting
                                                          processes</h3>
                                                    </div>
-                                                   <div class="course__curriculum-meta"></div>
+
+                                                   <div class="course__curriculum-meta">
+                                                      <button type="button" id="button2T"
+                                                         class="btn btn-outline-primary btn-sm"
+                                                         onclick="loadYouTubeVideo('Chapter 02')" data-bs-toggle="modal"
+                                                         data-bs-target="#myModal2">Start
+                                                         Assessment..</button>
+                                                   </div>
+
+                                                   <div class="modal" id="myModal2">
+                                                      <div class="modal-dialog modal-fullscreen">
+                                                         <div class="modal-content">
+                                                            <div class="modal-header custom-header-modal">
+                                                               <h4 class="modal-title text-success bg-muted">Assessment
+                                                                  02
+                                                                  - Types of Casting processes
+                                                               </h4><!--<button type="button" class="btn-close"
+                                                                  data-bs-dismiss="modal"></button> -->
+                                                            </div>
+
+
+                                                            <div class="modal-body">
+                                                               <div
+                                                                  class="alert alert-warning alert-dismissible mt-5 mx-4"
+                                                                  role="alert">
+                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" fill="currentColor"
+                                                                     class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+                                                                     viewBox="0 0 16 16" role="img"
+                                                                     aria-label="Warning:">
+                                                                     <path
+                                                                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                                  </svg>Please do not refresh the page . If
+                                                                  so you may
+                                                                  need to re take the exam.<button type="button"
+                                                                     class="btn-close" data-bs-dismiss="alert"
+                                                                     aria-label="Close"></button>
+                                                               </div>
+
+                                                               <div class="ModalBodyPlaceholder">
+                                                                  <div class="Quizcontainer">
+
+                                                                     <div id="quiz2"></div>
+                                                                     <div id="result2" class="quizResult"></div>
+                                                                     <div class="quiz-Align-btn">
+                                                                        <button id="submit2"
+                                                                           class="QuizButton">Next</button>
+                                                                     </div>
+                                                                     <div class="quiz-Align-bottom-btn">
+                                                                        <button id="retry2"
+                                                                           class="QuizButton Quizhide">Retry</button>
+                                                                        <button id="showAnswer2"
+                                                                           class="QuizButton Quizhide">Show
+                                                                           Answer</button>
+                                                                     </div>
+
+
+
+                                                                  </div>
+                                                               </div>
+
+                                                            </div>
+                                                            <div class="modal-footer custom-header-modal">
+                                                               <!-- <button type="button" class="btn btn-info"
+                                                               id="ModalLaunchBtn">Launch
+                                                                  Exam</button> -->
+
+                                                               <button type="button" class="btn btn-danger"
+                                                                  data-bs-dismiss="modal">Close</button>
+                                                            </div>
+
+                                                         </div>
+                                                      </div>
+                                                   </div>
+
                                                 </div>
                                              </div>
                                           </div>
                                        </div>
                                     </div>
-                                    <div class="accordion" id="course__accordion">
+                                    <div class="accordion" id="course__accordion-3">
                                        <div class="accordion-item mb-50">
                                           <h2 class="accordion-header" id="week-01"><button class="accordion-button"
                                                 type="button" data-bs-toggle="collapse"
@@ -564,7 +703,7 @@
                                                 aria-controls="week-01-content">Chapter 03: Molding
                                                 Defects</button></h2>
                                           <div id="week-01-content" class="accordion-collapse collapse show"
-                                             aria-labelledby="week-01" data-bs-parent="#course__accordion">
+                                             aria-labelledby="week-01" data-bs-parent="#course__accordion-3">
                                              <div class="accordion-body">
                                                 <div
                                                    class="course__curriculum-content d-sm-flex justify-content-between align-items-center">
@@ -627,8 +766,8 @@
                                                             <div class="modal-content">
                                                                <div class="modal-header">
                                                                   <h4 class="modal-title">Molding
-                                                                     Defects</h4><button type="button"
-                                                                     class="btn-close" data-bs-dismiss="modal"></button>
+                                                                     Defects</h4><button type="button" class="btn-close"
+                                                                     data-bs-dismiss="modal"></button>
                                                                </div>
                                                                <div class="modal-body">
                                                                   <div class="embed-responsive embed-responsive-16by9">
@@ -674,19 +813,92 @@
                                                       </svg>
                                                       <h3><span>Assessment:</span>Molding Defects</h3>
                                                    </div>
-                                                   <div class="course__curriculum-meta"></div>
+                                                   <div class="course__curriculum-meta">
+                                                      <button type="button" id="button3T"
+                                                         class="btn btn-outline-primary btn-sm"
+                                                         onclick="loadYouTubeVideo('Chapter 03')" data-bs-toggle="modal"
+                                                         data-bs-target="#myModal3">Start
+                                                         Assessment...</button>
+                                                   </div>
+                                                   <div class="modal" id="myModal3">
+                                                      <div class="modal-dialog modal-fullscreen">
+                                                         <div class="modal-content">
+                                                            <div class="modal-header custom-header-modal">
+                                                               <h4 class="modal-title text-success bg-muted">Assessment
+                                                                  03
+                                                                  - Molding Defects
+                                                               </h4><!--<button type="button" class="btn-close"
+                                                                  data-bs-dismiss="modal"></button> -->
+                                                            </div>
+
+
+                                                            <div class="modal-body">
+                                                               <div
+                                                                  class="alert alert-warning alert-dismissible mt-5 mx-4"
+                                                                  role="alert">
+                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" fill="currentColor"
+                                                                     class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+                                                                     viewBox="0 0 16 16" role="img"
+                                                                     aria-label="Warning:">
+                                                                     <path
+                                                                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                                  </svg>Please do not refresh the page . If
+                                                                  so you may
+                                                                  need to re take the exam.<button type="button"
+                                                                     class="btn-close" data-bs-dismiss="alert"
+                                                                     aria-label="Close"></button>
+                                                               </div>
+
+                                                               <div class="ModalBodyPlaceholder">
+                                                                  <div class="Quizcontainer">
+
+
+                                                                     <div id="quiz3"></div>
+                                                                     <div id="result3" class="quizResult"></div>
+                                                                     <div class="quiz-Align-btn">
+                                                                        <button id="submit3"
+                                                                           class="QuizButton">Next</button>
+                                                                     </div>
+                                                                     <div class="quiz-Align-bottom-btn">
+                                                                        <button id="retry3"
+                                                                           class="QuizButton Quizhide">Retry</button>
+                                                                        <button id="showAnswer3"
+                                                                           class="QuizButton Quizhide">Show
+                                                                           Answer</button>
+                                                                     </div>
+
+
+
+                                                                  </div>
+                                                               </div>
+
+                                                            </div>
+                                                            <div class="modal-footer custom-header-modal">
+                                                               <!-- <button type="button" class="btn btn-info"
+                                                               id="ModalLaunchBtn">Launch
+                                                                  Exam</button> -->
+
+                                                               <button type="button" class="btn btn-danger"
+                                                                  data-bs-dismiss="modal">Close</button>
+                                                            </div>
+
+                                                         </div>
+                                                      </div>
+                                                   </div>
                                                 </div>
                                              </div>
                                           </div>
                                        </div>
                                     </div>
+
                                  </div>
-                                 <div class="container mt-5 d-flex justify-content-between">
+                                 <div class="d-none" id="courseCompletionDoc">
                                     <div>
                                        <h3>Congratulations on completing the course!</h3>
                                        <p>Course Completion Certificate</p>
                                     </div><button class="btn btn-success btn-sm rounded-3" style="height:40px"><a
-                                          href="path_to_certificate.pdf"
+                                          href="./assets/docs/courseCertificate.pdf"
                                           download="course_completion_certificate.pdf">Download
                                           Certificate</a></button>
                                  </div>
@@ -793,7 +1005,7 @@
                                                 <div class="course__comment-content">
                                                    <div class="course__comment-wrapper ml-70 fix">
                                                       <div class="course__comment-info float-start">
-                                                         <h4>Murthyt</h4><span>July 14, 2022</span>
+                                                         <h4>Murthy</h4><span>July 14, 2022</span>
                                                       </div>
                                                       <div class="course__comment-rating float-start float-sm-end">
                                                          <ul>
@@ -1248,6 +1460,10 @@
    <script src="assets/js/ajax-form.js"></script>
    <script src="assets/js/countdown.js"></script>
    <script src="assets/js/main.js"></script>
+   <script src="assets/js/cQuiz1.js"></script>
+   <script src="assets/js/cQuiz2.js"></script>
+   <script src="assets/js/cQuiz3.js"></script>
+
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
