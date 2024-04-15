@@ -147,7 +147,7 @@
                   <div class="postbox__wrapper pr-30">
                      <article class="postbox__item format-image mb-50 transition-3">
                         <div class="postbox__thumb m-img">
-                           <img src="assets/img/blog/blog-big-1.jpg" alt="">
+                           <img src="assets/img/blog/EvolutionofManufacturiung - Copy.png" alt="">
                         </div>
                         <div class="postbox__content">
                            <div class="postbox__meta">
@@ -209,17 +209,17 @@
                                  delinquent bloke boot blatant.</p> -->
                            </div>
 
-                           <div class="postbox__tag tagcloud">
-                              <span>Post Tags :</span>
-                              <a href="#">ManufacturingHistory</a>
-                              <a href="index.html">IndustryInnovations</a>
-                              <a href="#">FutureOfManufacturing</a>
-                           </div>
+                           <div class="events__tag">
+                              <span><i class="fal fa-tag"></i></span>
+                              <a>ManufacturingHistory, </a>
+                              <a>IndustryInnovations,</a>
+                              <a>FutureOfManufacturing</a>
+                          </div>
                         </div>
                      </article>
                      <div class="postbox__comment mb-65">
                         <h3 class="postbox__comment-title">3 Comments</h3>
-                        <ul>
+                        <ul id="commentsList">
                            <li>
                               <div class="postbox__comment-box grey-bg-2">
                                  <div class="postbox__comment-info d-flex">
@@ -235,9 +235,7 @@
                                     <p>Fascinating read! It's incredible to see how far we've come in manufacturing.
                                        From handcrafted goods to the efficiency of Industry 4.0, it's a testament to
                                        human ingenuity.</p>
-                                    <div class="postbox__comment-reply">
-                                       <a href="#">Reply</a>
-                                    </div>
+                                    
                                  </div>
                               </div>
                            </li>
@@ -254,9 +252,7 @@
                                  </div>
                                  <div class="postbox__comment-text ml-65">
                                     <p>I never realized the impact of the Industrial Revolution on manufacturing until reading this. The transition to assembly lines and now Industry 4.0 is truly a marvel of progress.</p>
-                                    <div class="postbox__comment-reply">
-                                       <a href="#">Reply</a>
-                                    </div>
+                                 
                                  </div>
                               </div>
                            </li>
@@ -273,9 +269,7 @@
                                  </div>
                                  <div class="postbox__comment-text ml-65">
                                     <p>As a mechanical engineer, this blog resonates with me. Understanding the history helps us appreciate the innovations and challenges ahead. Exciting times for manufacturing!</p>
-                                    <div class="postbox__comment-reply">
-                                       <a href="#">Reply</a>
-                                    </div>
+                                  
                                  </div>
                               </div>
                            </li>
@@ -283,35 +277,24 @@
                      </div>
                      <div class="postbox__comment-form">
                         <h3 class="postbox__comment-form-title">Write a comment</h3>
-                        <form action="#">
+                        <form id="reviewForm" autocomplete="off">
                            <div class="row">
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
                                  <div class="postbox__comment-input">
-                                    <input type="text" placeholder="Your Name">
+                                    <input type="text" placeholder="Your Name" id="nameInput" required>
                                  </div>
                               </div>
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
                                  <div class="postbox__comment-input">
-                                    <input type="email" placeholder="Your Email">
+                                    <input type="email" placeholder="Your Email" id="emailInput" required>
                                  </div>
                               </div>
                               <div class="col-xxl-12">
                                  <div class="postbox__comment-input">
-                                    <input type="text" placeholder="Website">
+                                    <textarea placeholder="Enter your comment ..." id="reviewText" required></textarea>
                                  </div>
                               </div>
-                              <div class="col-xxl-12">
-                                 <div class="postbox__comment-input">
-                                    <textarea placeholder="Enter your comment ..."></textarea>
-                                 </div>
-                              </div>
-                              <div class="col-xxl-12">
-                                 <div class="postbox__comment-agree d-flex align-items-start mb-20">
-                                    <input class="e-check-input" type="checkbox" id="e-agree">
-                                    <label class="e-check-label" for="e-agree">Save my name, email, and website in this
-                                       browser for the next time I comment.</label>
-                                 </div>
-                              </div>
+
                               <div class="col-xxl-12">
                                  <div class="postbox__comment-btn p-relative z-index-1">
                                     <button type="submit" class="tp-btn"><span>Post Comment</span></button>
@@ -471,6 +454,7 @@
    <script src="assets/js/countdown.js"></script>
    <script src="assets/js/main.js"></script>
    <script src="assets/js/headerAndFooter.js"></script>
+   <script src="assets/js/addReviewBlog.js"></script>
 </body>
 
 

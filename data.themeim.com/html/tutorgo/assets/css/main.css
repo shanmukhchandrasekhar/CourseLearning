@@ -878,6 +878,22 @@ input[type=color] {
   animation: pulse 2s infinite;
 }
 
+.play-btn-audio {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 44px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #2c79ff;
+  color: white;
+
+}
+
+
 /* pulse btn */
 .pulse-btn {
   display: inline-block;
@@ -7459,8 +7475,10 @@ input[type=color] {
 .progressCustom{
   background: #0C4105;
 background: radial-gradient(circle farthest-corner at center center, #0C4105 0%, #229E12 100%);
+}
 
-
+.icon_star {
+  color: gold;
 }
 
 .Quizcontainer {
