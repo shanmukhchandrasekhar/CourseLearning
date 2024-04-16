@@ -154,6 +154,22 @@ const quizData2 = [
     showAnswerButton2.style.display = 'inline-block';
     resultContainer2.innerHTML = `You scored ${score_2} out of ${quizData2.length}!`;
 
+    
+    if (score_2 >= 8) {
+      progressBar.style.width = '66%'; // Set progress bar to 33% width
+      progressBar.innerHTML = '66%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '33'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-danger'); // Remove red color if previously set
+      progressBar.classList.add('bg-success'); // Add green color
+    } else {
+      progressBar.style.width = '33%'; // Set progress bar to 0% width
+      progressBar.innerHTML = '33%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '0'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-success'); // Remove green color if previously set
+      progressBar.classList.add('bg-danger'); // Add red color
+    }
+
+
     if(score_2>=8){
         thirdBtnLaunchH.disabled=false;   
         // secondBtnLaunchH.disabled=false;   
@@ -173,6 +189,21 @@ const quizData2 = [
     showAnswerButton2.style.display = 'none';
     resultContainer2.innerHTML = '';
     displayQuestion2();
+
+    if (score_2 >= 8) {
+      progressBar.style.width = '66%'; // Set progress bar to 33% width
+      progressBar.innerHTML = '66%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '33'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-danger'); // Remove red color if previously set
+      progressBar.classList.add('bg-success'); // Add green color
+    } else {
+      progressBar.style.width = '33%'; // Set progress bar to 0% width
+      progressBar.innerHTML = '33%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '0'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-success'); // Remove green color if previously set
+      progressBar.classList.add('bg-danger'); // Add red color
+    }
+
 
     if(score_2>=8){
         thirdBtnLaunchH.disabled=false;      
@@ -205,6 +236,21 @@ const quizData2 = [
       <p>Incorrect Answers:</p>
       ${incorrectAnswersHtml}
     `;
+
+    if (score_2 >= 8) {
+      progressBar.style.width = '66%'; // Set progress bar to 33% width
+      progressBar.innerHTML = '66%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '33'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-danger'); // Remove red color if previously set
+      progressBar.classList.add('bg-success'); // Add green color
+    } else {
+      progressBar.style.width = '33%'; // Set progress bar to 0% width
+      progressBar.innerHTML = '33%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '0'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-success'); // Remove green color if previously set
+      progressBar.classList.add('bg-danger'); // Add red color
+    }
+
 
     if(score_2>=8){
         thirdBtnLaunchH.disabled=false;

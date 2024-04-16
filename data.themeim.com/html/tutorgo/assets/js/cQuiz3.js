@@ -150,6 +150,22 @@ const quizData3 = [
     showAnswerButton3.style.display = 'inline-block';
     resultContainer3.innerHTML = `You scored ${score_3} out of ${quizData3.length}!`;
 
+
+    if (score_3 >= 8) {
+      progressBar.style.width = '100%'; // Set progress bar to 33% width
+      progressBar.innerHTML = '100%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '100'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-danger'); // Remove red color if previously set
+      progressBar.classList.add('bg-success'); // Add green color
+    } else {
+      progressBar.style.width = '66%'; // Set progress bar to 0% width
+      progressBar.innerHTML = '66%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '0'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-success'); // Remove green color if previously set
+      progressBar.classList.add('bg-danger'); // Add red color
+    }
+
+
     if(score_3>=8){           
         courseCompletionEnable.classList.add('container', 'mt-5', 'd-flex', 'justify-content-between')
         courseCompletionEnable.classList.remove('d-none')
@@ -170,6 +186,20 @@ const quizData3 = [
     showAnswerButton3.style.display = 'none';
     resultContainer3.innerHTML = '';
     displayQuestion3();
+
+    if (score_3 >= 8) {
+      progressBar.style.width = '100%'; // Set progress bar to 33% width
+      progressBar.innerHTML = '100%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '100'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-danger'); // Remove red color if previously set
+      progressBar.classList.add('bg-success'); // Add green color
+    } else {
+      progressBar.style.width = '66%'; // Set progress bar to 0% width
+      progressBar.innerHTML = '66%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '0'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-success'); // Remove green color if previously set
+      progressBar.classList.add('bg-danger'); // Add red color
+    }
 
     if(score_3>=8){           
         courseCompletionEnable.classList.add('container', 'mt-5', 'd-flex', 'justify-content-between')
@@ -203,6 +233,20 @@ const quizData3 = [
       <p>Incorrect Answers:</p>
       ${incorrectAnswersHtml}
     `;
+
+    if (score_3 >= 8) {
+      progressBar.style.width = '100%'; // Set progress bar to 33% width
+      progressBar.innerHTML = '100%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '100'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-danger'); // Remove red color if previously set
+      progressBar.classList.add('bg-success'); // Add green color
+    } else {
+      progressBar.style.width = '66%'; // Set progress bar to 0% width
+      progressBar.innerHTML = '66%'; // Update text inside the progress bar
+      progressBar.setAttribute('aria-valuenow', '0'); // Update aria-valuenow attribute
+      progressBar.classList.remove('bg-success'); // Remove green color if previously set
+      progressBar.classList.add('bg-danger'); // Add red color
+    }
 
     if(score_3>=8){           
         courseCompletionEnable.classList.add('container', 'mt-5', 'd-flex', 'justify-content-between')
