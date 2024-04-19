@@ -1,0 +1,179 @@
+<html lang="en">
+
+<head>
+
+</head>
+<link rel="stylesheet" href="assets/css/main.css">
+
+<style>
+   .show {
+      display: block !important;
+   }
+
+   .submenu1 {
+      display: none;
+   }
+
+
+   
+
+</style>
+
+<body>
+   <header>
+      <div class="tp-header__area tp-header__transparent">
+         <div class="tp-header__main" id="header-sticky">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
+                     <div class="logo has-border">
+                        <a href="index.html">
+                           <img src="assets/img/logo/WhatsApp_Image_2024-04-14_at_12.04.51_AM-removebg-preview.png"
+                              alt="logo">
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-xxl-6 col-xl-6 col-lg-7 d-none d-lg-block ">
+                     <div class="main-menu">
+                        <nav id="mobile-menu">
+                           <ul>
+                              <li>
+                                 <a href="index.html">Home</a>
+                                 <!--<ul class="submenu">
+                                   
+                               </ul>-->
+                              </li>
+                              <li>
+                                 <a href="about-us.html">About</a>
+                              </li>
+                              <li class="has-dropdown">
+                                 <a href="course.html">Courses</a>
+                                 <ul class="submenu">
+                                    <!-- <li><a href="course-list.html">Courses List</a></li> -->
+                                    <li><a href="course.html">Courses Grid</a></li>
+                                    <li><a href="course-details.html">Course Details</a></li>
+                                    <!-- <li><a href="cart.html">Cart</a></li>
+                                  <li><a href="checkout.html">Checkout</a></li> -->
+                                 </ul>
+                              </li>
+                              <li class="has-dropdown">
+                                 <a href="#">Pages</a>
+                                 <ul class="submenu">
+                                    <li><a href="event.html">Events</a></li>
+                                    <li><a href="event-details.html">Event Details</a></li>
+
+                                    <li><a href="faq.html">FAQ</a></li>
+
+                                 </ul>
+                              </li>
+                              <li class="has-dropdown">
+                                 <a href="blog.html">Blog</a>
+                                 <ul class="submenu">
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                 </ul>
+                              </li>
+                              <li>
+                               <a href="contact.html">Contact Us</a>
+                            </li>
+                           </ul>
+                         
+                        </nav>
+                     </div>
+                  </div>
+                  <div class="col-xxl-4 col-xl-4 col-lg-3 col-md-6 col-6">
+                     <div class="tp-header__main-right d-flex justify-content-end align-items-center pl-30">
+                        <div class="header-acttion-btns d-flex align-items-center d-none d-md-flex">
+
+                           <!-- <a href="sign-up.html" class="tp-btn br-0">
+                              <span>Sign-Up <i></i> </span>
+                              <div class="transition"></div>
+                           </a> -->
+                           <a href="sign-up.html" class="tp-btn br-0">
+                              <span>Sign-Up<i class="fa-regular "></i> </span>
+                              <div class="transition"></div>
+                           </a>
+                           
+                        </div>
+                     
+                          
+                    
+                        
+                        <div class="ml-50 d-lg-none">
+
+
+                           <nav class="navbar navbar-light fixed-top navbar-half-width">
+                              <a class="navbar-brand" href="#">
+                               
+                              </a>
+                              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                 data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+                                 <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+                                 aria-labelledby="navbarOffcanvasLgLabel">
+                                 <div class="offcanvas-header" style="color: yellowgreen">
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                       aria-label="Close"></button>
+                                 </div>
+                                 <ul>
+                                    <li>
+                                       <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                       <a href="about-us.html">About</a>
+                                    </li>
+                                    <li class="has-dropdown">
+                                       <a href="#" onclick="toggleSubmenu(event, 'coursesSubMenu')">CoursesMenu</a>
+                                       <ul class="submenu1" id="coursesSubMenu">
+                                          <li><a href="course.html">Courses Grid</a></li>
+                                          <li><a href="course-details.html">Course Details</a></li>
+                                       </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                       <a href="#" onclick="toggleSubmenu(event, 'pagesSubMenu')">PagesMenu</a>
+                                       <ul class="submenu1" id="pagesSubMenu">
+                                          <li><a href="event.html">Events</a></li>
+                                          <li><a href="event-details.html">Event Details</a></li>
+                                          <li><a href="faq.html">FAQ</a></li>
+                                       </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                       <a href="#" onclick="toggleSubmenu(event, 'blogSubMenu')">BlogMenu</a>
+                                       <ul class="submenu1" id="blogSubMenu">
+                                          <li><a href="blog.html">Blog</a></li>
+                                          <li><a href="blog-details.html">Blog Details</a></li>
+                                       </ul>
+                                    </li>
+                                    <li>
+                                       <a href="contact.html">Contact Us</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </nav>
+
+
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <script>
+      function toggleSubmenu(event, submenuId) {
+         event.preventDefault();
+         event.stopPropagation();
+         var submenu = document.getElementById(submenuId);
+         submenu.classList.toggle("show");
+      }
+
+   </script>
+
+</body>
+
+</html>
